@@ -11,6 +11,11 @@ AOS.init({
 // -----------------------------
 window.addEventListener("load", () => {
 
+    if (window.location.hash) {
+        history.replaceState(null, "", window.location.pathname + window.location.search);
+        window.scrollTo(0, 0);
+    }
+
     setTimeout(() => {
 
         document.getElementById("loader").style.display = "none";
