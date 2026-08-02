@@ -65,17 +65,6 @@
         </div>
     </section>
 
-    <!-- Gallery -->
-    <section class="gallery">
-        <h2 data-aos="zoom-in">Our Memories 📸</h2>
-        <div class="images">
-            <img src="images/photo1.jpg" alt="Memory 1">
-            <img src="images/photo2.jpg" alt="Memory 2">
-            <img src="images/photo3.jpg" alt="Memory 3">
-            <img src="images/photo4.jpg" alt="Memory 4">
-        </div>
-    </section>
-
     <!-- Letter -->
     <section id="letter">
         <div class="letter-box" data-aos="zoom-in">
@@ -109,14 +98,19 @@
 
     <!-- Popup Section -->
     <div id="popup">
-        <div class="popup-content">
-            <!-- Surprise Image Display -->
-            <div class="popup-img-container">
-                <img src="ChatGPT Image Aug 2, 2026, 01_52_37 PM.png" alt="Surprise Gift" id="surprise-img">
+        <button class="close-btn" onclick="closePopup()">✕</button>
+        <div class="popup-body">
+            <div class="phone-frame">
+                <div class="phone-notch"></div>
+                <div class="phone-screen">
+                    <img src="ChatGPT Image Aug 2, 2026, 01_52_37 PM.png" alt="Phone Gift View" class="phone-image">
+                </div>
+                <div class="phone-home-bar"></div>
             </div>
-            <h2>You'll always be my brother.</h2>
-            <p>No matter where life takes us, I'll always be there. Happy Friendship Day ❤️</p>
-            <button onclick="closePopup()">Close ❤️</button>
+            <div class="popup-text">
+                <h2>You'll always be my brother.</h2>
+                <p>No matter where life takes us, I'll always be there. Happy Friendship Day ❤️</p>
+            </div>
         </div>
     </div>
 
@@ -136,22 +130,3 @@
 
 </body>
 </html>
-<!-- Popup Section: Phone View -->
-<div id="popup">
-    <!-- Floating Close Button -->
-    <button class="close-btn" onclick="closePopup()">✕</button>
-
-    <!-- Phone Mockup Container -->
-    <div class="phone-frame">
-        <!-- Phone Speaker / Dynamic Island Notch -->
-        <div class="phone-notch"></div>
-        
-        <!-- Screen Content Area -->
-        <div class="phone-screen">
-            <img src="ChatGPT Image Aug 2, 2026, 01_52_37 PM.png" alt="Phone Gift View" class="phone-image">
-        </div>
-
-        <!-- Phone Home Bar at Bottom -->
-        <div class="phone-home-bar"></div>
-    </div>
-</div>
