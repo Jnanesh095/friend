@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Friendship Day ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+</head>
+
+<body>
+
+<!-- Floating Hearts -->
+<div class="hearts"></div>
+
+<!-- Loading Screen -->
+<div id="loader">
+    <h1>✨ Preparing Something Special...</h1>
+    <div class="loading-bar">
+        <div class="loading"></div>
+    </div>
+</div>
+
+<!-- Main Website -->
+<div id="main">
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1 id="title">Happy Friendship Day ❤️</h1>
+        <h2 id="typing"></h2>
+        <p>I made something just for you...</p>
+        <a href="#letter">
+            <button>Begin Our Journey →</button>
+        </a>
+    </section>
+
+    <!-- Timeline -->
+    <section class="timeline">
+        <h2 data-aos="fade-up">Our Journey Together</h2>
+
+        <div class="card" data-aos="fade-right">
+            <h3>👶 Childhood</h3>
+            <p>We grew up together, making countless memories.</p>
+        </div>
+
+        <div class="card" data-aos="fade-left">
+            <h3>😂 Roasting Each Other</h3>
+            <p>No matter what happened, roasting each other was always our love language.</p>
+        </div>
+
+        <div class="card" data-aos="fade-right">
+            <h3>🤝 Sharing Problems</h3>
+            <p>Whenever life became difficult, we stood beside each other.</p>
+        </div>
+
+        <div class="card" data-aos="fade-left">
+            <h3>❤️ Forever Friends</h3>
+            <p>No matter where life takes us, our friendship will always stay.</p>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="gallery">
+        <h2 data-aos="zoom-in">Our Memories 📸</h2>
+        <div class="images">
+            <img src="images/photo1.jpg" alt="Memory 1">
+            <img src="images/photo2.jpg" alt="Memory 2">
+            <img src="images/photo3.jpg" alt="Memory 3">
+            <img src="images/photo4.jpg" alt="Memory 4">
+        </div>
+    </section>
+
+    <!-- Letter -->
+    <section id="letter">
+        <div class="letter-box" data-aos="zoom-in">
+            <h2>💌 Dear Best Friend</h2>
+            <p>
+                We've been together since our childhood. From fighting over silly things,
+                rage-baiting each other for fun, sharing our problems, and creating countless memories together—every moment has been special. 😄✨
+                <br><br>
+                One thing I'll always be grateful for is the emotional strength you've given me whenever I've gone through difficult times. ❤️🫂 Your support has always helped me stay strong, even when life felt overwhelming.
+                <br><br>
+                Yes, we've had our share of fights, and sometimes I let my ego get the better of me. 😅 But you never complained or gave up on our friendship, and that means more to me than I can put into words. 💙
+                <br><br>
+                I truly hope we continue to share this beautiful bond for the rest of our lives. 🌈🤝 No matter where life takes us, I know we'll always stand by each other and protect this friendship because it's one of the most valuable things we have. ❤️
+                <br><br>
+                I know we will make many more memories, laugh at the dumbest jokes, roast each other endlessly 😂🔥, and always be there whenever one of us needs the other.
+                <br><br>
+                And honestly... I can't write much more because we've never really been this emotional with each other. 😭😂 We usually just roast each other every chance we get!
+                <br><br>
+                So, to my <b>bestest best friend</b>—
+            </p>
+            <h2 style="color:#ff4d6d;">Happy Friendship Day! ❤️</h2>
+            <h3>Yours Truly,<br>Jnanesh 💙</h3>
+        </div>
+    </section>
+
+    <!-- Surprise Section -->
+    <section class="surprise">
+        <h2>Ready For A Surprise?</h2>
+        <button id="gift" onclick="openPopup()">🎁 Open Gift</button>
+    </section>
+
+    <!-- Popup Section -->
+    <div id="popup">
+        <div class="popup-content">
+            <!-- Surprise Image Display -->
+            <div class="popup-img-container">
+                <img src="ChatGPT Image Aug 2, 2026, 01_52_37 PM.png" alt="Surprise Gift" id="surprise-img">
+            </div>
+            <h2>You'll always be my brother.</h2>
+            <p>No matter where life takes us, I'll always be there. Happy Friendship Day ❤️</p>
+            <button onclick="closePopup()">Close ❤️</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <h2>Forever Friends ❤️</h2>
+        <p>P.S. We'd never say all this face-to-face... because we'd start roasting each other in 5 seconds. 😂</p>
+    </footer>
+
+</div>
+
+<!-- JS -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
+<!-- Full-Screen Gift Modal -->
+<div id="popup">
+    <!-- Floating Close Button -->
+    <button class="close-btn" onclick="closePopup()">✕</button>
+
+    <!-- Fullscreen Container -->
+    <div class="fullscreen-gift-container">
+        <img src="ChatGPT Image Aug 2, 2026, 01_52_37 PM.png" alt="Gift Image" class="fullscreen-img">
+        
+        <div class="floating-caption">
+            <h2>You'll always be my brother ❤️</h2>
+            <p>No matter where life takes us, I'll always be there.</p>
+        </div>
+    </div>
+</div>
