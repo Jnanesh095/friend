@@ -282,77 +282,105 @@ width:100%;
 }
 
 }
-/* --- True Fullscreen Gift Viewer --- */
+/* --- Phone View Modal Styling --- */
 
 #popup {
-    display: none; /* Controlled by script.js */
+    display: none; /* Toggled by script.js */
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(5, 3, 12, 0.95); /* Deep dark blurred overlay */
+    background: rgba(0, 0, 0, 0.88);
     backdrop-filter: blur(10px);
     z-index: 999999;
-    overflow: hidden;
-}
-
-.fullscreen-gift-container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 15px;
+    padding: 20px;
     box-sizing: border-box;
 }
 
-/* Image scales to full screen dimensions while preserving aspect ratio */
-.fullscreen-img {
-    width: 100vw;
-    height: 85vh;
-    object-fit: contain; /* Keeps entire image sharp and visible without clipping */
-    filter: drop-shadow(0px 0px 20px rgba(255, 77, 109, 0.4));
+/* 📱 Realistic Smartphone Frame */
+.phone-frame {
+    position: relative;
+    
+    /* Standard Smartphone Aspect Ratio Dimensions (19.5:9 ratio) */
+    width: 360px;
+    height: 740px;
+    max-height: 85vh; /* Fits comfortably on smaller desktop screens */
+    max-width: 90vw;
+    
+    background: #0f0c1b;
+    border: 10px solid #221f30; /* Outer Phone Bezel */
+    border-radius: 48px; /* Rounded Phone Corners */
+    box-shadow: 
+        0 0 0 2px rgba(255, 77, 109, 0.5), /* Glowing Accent Edge */
+        0 20px 50px rgba(0, 0, 0, 0.8);
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
 }
 
-/* Minimalist floating caption below the image */
-.floating-caption {
-    margin-top: 10px;
-    text-align: center;
-    color: #ffffff;
+/* Phone Top Camera / Notch */
+.phone-notch {
+    position: absolute;
+    top: 10px;
+    width: 100px;
+    height: 22px;
+    background: #000000;
+    border-radius: 20px;
+    z-index: 10;
 }
 
-.floating-caption h2 {
-    color: #ff4d6d;
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 4px;
+/* Phone Display Screen Area */
+.phone-screen {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto; /* Allows smooth scrolling if the graphic is tall */
+    scrollbar-width: none; /* Hides scrollbar for clean app feel */
 }
 
-.floating-caption p {
-    color: #e0e0e0;
-    font-size: 1rem;
-    margin: 0;
+.phone-screen::-webkit-scrollbar {
+    display: none; /* Safari & Chrome scrollbar hide */
 }
 
-/* Modern floating close button in top right corner */
+/* Image Inside Phone Display */
+.phone-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Phone Home Indicator Bar at Bottom */
+.phone-home-bar {
+    position: absolute;
+    bottom: 8px;
+    width: 120px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+    z-index: 10;
+}
+
+/* Close Button (Floating Outside Phone) */
 .close-btn {
     position: absolute;
-    top: 20px;
-    right: 25px;
+    top: 25px;
+    right: 30px;
     background: #ff4d6d;
     color: #ffffff;
     border: none;
-    width: 42px;
-    height: 42px;
+    width: 44px;
+    height: 44px;
     border-radius: 50%;
     font-size: 1.3rem;
     font-weight: bold;
     cursor: pointer;
     z-index: 1000000;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
-    transition: all 0.2s ease;
+    transition: transform 0.2s, background 0.2s;
 }
 
 .close-btn:hover {
